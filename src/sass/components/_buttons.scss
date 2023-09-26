@@ -1,0 +1,37 @@
+@use '../base/variables' as *;
+
+/* Components */
+
+/* Buttons */
+
+.btn-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button {
+	padding: 13px 24px;
+	border: none;
+	background-color: $color-dark;
+	color: #fff;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: #374151;
+	}
+
+	@include lg {
+		padding: 20px 32px;
+	}
+}
+
+.btn-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 64px;
+	height: 64px;
+	background-color: #8b5cf6;
+	border: none;
+}

@@ -1,0 +1,64 @@
+@use './variables' as *;
+
+/* Fonts */
+
+@font-face {
+	font-family: 'neue-roman-500';
+	src: url('../font/neuehaasdisplayroman-webfont.woff2') format('woff2'),
+		url('../font/neuehaasdisplayroman-webfont.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Global styles */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $font-primary;
+	font-size: 20px;
+	line-height: 32px;
+	color: $color-dark;
+	overflow-x: hidden;
+
+	@include lg {
+		font-size: 24px;
+		line-height: 38px;
+	}
+}
+
+.sections-box {
+	position: relative;
+
+	.opacity-box {
+		display: none;
+		transition: 1s;
+	}
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	padding: 88px 0;
+
+	@include lg {
+		padding: 112px 0;
+	}
+}
+
+.container {
+	padding: 0 24px;
+	width: 100%;
+	max-width: 1440px;
+
+	@include lg {
+		padding: 0 80px;
+	}
+
+	@include xl {
+		padding: 0 149px;
+	}
+}

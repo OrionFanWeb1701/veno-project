@@ -1,0 +1,27 @@
+/* Colors */
+
+$color-dark: #1e293b;
+
+/* Variables */
+
+$font-primary: 'neue-roman-500', sans-serif;
+
+/* Mixin RWD */
+
+@mixin md() {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin lg() {
+	@media only screen and (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin xl() {
+	@media only screen and (min-width: 1400px) {
+		@content;
+	}
+}

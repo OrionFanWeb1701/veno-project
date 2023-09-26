@@ -1,0 +1,43 @@
+@use '../base/variables' as *;
+
+/* Footer */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 17px 24px;
+	width: 100%;
+
+	@include lg {
+		padding: 28px 32px;
+		background-color: #f1f5f9;
+	}
+
+	a {
+		display: flex;
+		font-size: 18px;
+		line-height: 22px;
+		color: #fff;
+
+		@include lg {
+			font-size: 20px;
+			line-height: 24px;
+		}
+
+		&:first-child {
+			@include lg {
+				color: #fff;
+				z-index: 100;
+			}
+		}
+
+		&:last-child {
+			@include lg {
+				color: $color-dark;
+			}
+		}
+	}
+}

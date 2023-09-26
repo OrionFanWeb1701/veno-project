@@ -1,0 +1,30 @@
+@use '../base/variables' as *;
+
+/* Floating text */
+
+.floating-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+
+	@include lg {
+		height: 320px;
+	}
+
+	marquee {
+		display: none;
+
+		@include lg {
+			display: block;
+			font-size: 144px;
+			line-height: 180px;
+		}
+
+		video {
+			margin: 0 48px 0;
+			width: 144px;
+		}
+	}
+}

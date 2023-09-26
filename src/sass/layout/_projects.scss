@@ -1,0 +1,267 @@
+@use '../base/variables' as *;
+
+/* Projects */
+
+.projects {
+	.heading--title {
+		text-align: left;
+
+		@include lg {
+			margin-bottom: 84px;
+		}
+
+		@include xl {
+			margin: 0 0 84px 118px;
+		}
+	}
+
+	&__content {
+		display: grid;
+		row-gap: 48px;
+		margin-bottom: 48px;
+
+		@include md {
+			column-gap: 32px;
+			row-gap: 32px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 50% 46%;
+			margin-bottom: 83px;
+		}
+
+		@include xl {
+			row-gap: 0;
+			grid-template-rows: 794px 646px;
+		}
+	}
+
+	&__box {
+		&--one {
+			width: 269px;
+
+			@include md {
+				width: 100%;
+			}
+
+			.projects__graph {
+				position: relative;
+				height: 202px;
+				background-color: #c4b5fd;
+
+				@include xl {
+					height: 416px;
+				}
+			}
+
+			.projects__img {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				column-gap: 11.65px;
+
+				@include xl {
+					column-gap: 24px;
+				}
+
+				.frag2 {
+					position: absolute;
+					right: 11.16px;
+					top: 0;
+					width: 117.02px;
+
+					@include xl {
+						width: 241px;
+						right: 24px;
+					}
+				}
+			}
+
+			.projects__info {
+				p {
+					@include xl {
+						margin-left: 235px;
+					}
+				}
+			}
+		}
+
+		&--two {
+			justify-self: end;
+			width: 268px;
+
+			@include md {
+				position: relative;
+				top: -40px;
+			}
+
+			@include lg {
+				width: 315px;
+			}
+
+			@include xl {
+				top: -84px;
+				width: 438px;
+			}
+
+			.projects__graph {
+				height: 268px;
+				background-color: #93c5fd;
+
+				@include xl {
+					height: 584px;
+				}
+			}
+
+			.projects__info {
+				p {
+					@include xl {
+						margin-left: 118px;
+					}
+				}
+			}
+		}
+
+		&--three {
+			width: 269px;
+
+			@include md {
+				width: 100%;
+				order: 4;
+			}
+
+			.projects__graph {
+				height: 202px;
+				background-color: #86efac;
+
+				@include xl {
+					height: 416px;
+				}
+			}
+
+			.projects__img {
+				img {
+					width: 105%;
+				}
+			}
+
+			.projects__info {
+				p {
+					@include xl {
+						margin-left: 235px;
+					}
+				}
+			}
+		}
+
+		&--four {
+			justify-self: end;
+			width: 268px;
+
+			@include md {
+				position: relative;
+				top: -46px;
+				justify-self: start;
+				order: 3;
+			}
+
+			@include lg {
+				width: 315px;
+			}
+
+			@include xl {
+				top: -84px;
+				width: 438px;
+			}
+
+			.projects__graph {
+				position: relative;
+				padding: 11.65px 11.41px 0;
+				height: 268px;
+				background-color: #fdba74;
+
+				@include xl {
+					padding: 24px 24px 0;
+					height: 584px;
+				}
+			}
+
+			.projects__img {
+				.frag1 {
+					position: relative;
+					z-index: 2;
+				}
+				.frag2 {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 47%;
+					z-index: 1;
+
+					@include xl {
+						display: none;
+					}
+				}
+			}
+
+			.projects__info {
+				p {
+					@include xl {
+						margin-left: 118px;
+					}
+				}
+			}
+		}
+	}
+
+	&__graph {
+		padding: 11.65px 0 0 11.41px;
+		overflow: hidden;
+
+		@include xl {
+			padding: 24px 24px 0;
+		}
+
+		p {
+			margin-bottom: 11.39px;
+			font-family: Arial, sans-serif;
+			font-size: 8px;
+			font-weight: 700;
+			line-height: 9px;
+
+			@include xl {
+				margin-bottom: 24px;
+				font-size: 16px;
+				line-height: 18px;
+			}
+		}
+	}
+
+	&__img {
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__info {
+		.heading--title {
+			margin: 24px 0 16px;
+			font-size: 24px;
+			line-height: 32px;
+
+			@include lg {
+				font-size: 32px;
+				line-height: 42px;
+			}
+		}
+
+		p {
+			margin-left: 3.6em;
+			font-size: 16px;
+			line-height: 24px;
+
+			@include lg {
+				font-size: 18px;
+				line-height: 27px;
+			}
+		}
+	}
+}

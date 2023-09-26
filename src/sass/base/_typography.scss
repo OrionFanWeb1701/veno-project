@@ -1,0 +1,39 @@
+@use './variables' as *;
+
+/* Typography */
+
+.heading {
+	font-size: 48px;
+	line-height: 58px;
+	color: #fff;
+
+	@include lg {
+		font-size: 80px;
+		line-height: 96px;
+	}
+
+	&--hero {
+		font-size: 24px;
+		line-height: 38px;
+
+		@include lg {
+			font-size: 32px;
+			line-height: 51px;
+		}
+	}
+
+	&--title {
+		margin-bottom: 24px;
+		font-size: 40px;
+		line-height: 48px;
+		text-align: center;
+		color: $color-dark;
+
+		@include lg {
+			margin-bottom: 32px;
+			font-size: 64px;
+			line-height: 70px;
+			text-align: left;
+		}
+	}
+}

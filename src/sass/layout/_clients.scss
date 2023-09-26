@@ -1,0 +1,172 @@
+@use '../base/variables' as *;
+
+/* Clients */
+
+.clients {
+	padding-bottom: 37px;
+
+	@include lg {
+		margin-bottom: 112px;
+	}
+
+	.heading--title {
+		margin-bottom: 20px;
+		text-align: left;
+
+		@include lg {
+			margin-bottom: 48px;
+		}
+
+		@include xl {
+			margin: 0 0 48px 118px;
+		}
+	}
+
+	&__swiper {
+		margin-bottom: 24px;
+		height: 455px;
+
+		@include lg {
+			margin-bottom: 48px;
+		}
+
+		&:hover {
+			@include lg {
+				cursor: url('../img/cursor-slider.png'), pointer;
+			}
+		}
+
+		@include xl {
+			margin-left: 118px;
+		}
+
+		.swiper-slide {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 32px;
+			background-color: #f1f5f9;
+
+			@include xl {
+				width: 437px;
+			}
+		}
+	}
+
+	&__info {
+		img {
+			margin-bottom: 14.67px;
+		}
+
+		p {
+			font-size: 24px;
+		}
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+
+		p {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__logo-box {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include xl {
+			margin-left: 118px;
+			width: 906px;
+		}
+	}
+
+	&__img-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		height: 80px;
+
+		@include md {
+			width: 33%;
+		}
+
+		@include xl {
+			width: 227px;
+		}
+
+		&:nth-child(even) {
+			@include xl {
+				width: 226px;
+			}
+		}
+
+		.onyx {
+			width: 86px;
+
+			@include lg {
+				width: 107px;
+			}
+		}
+
+		.lighting {
+			width: 32px;
+
+			@include lg {
+				width: 40px;
+			}
+		}
+
+		.nazwa {
+			width: 91.43px;
+
+			@include lg {
+				width: 128px;
+			}
+		}
+
+		.minte {
+			width: 108.45px;
+
+			@include lg {
+				width: 144.6px;
+			}
+		}
+
+		.ferrero {
+			width: 96.86px;
+
+			@include lg {
+				width: 129.14px;
+			}
+		}
+
+		.carbovia {
+			width: 134.55px;
+
+			@include lg {
+				width: 185px;
+			}
+		}
+
+		.interia {
+			width: 63.16px;
+
+			@include lg {
+				width: 94.74px;
+			}
+		}
+
+		.lidl {
+			width: 32px;
+
+			@include lg {
+				width: 40px;
+			}
+		}
+	}
+}

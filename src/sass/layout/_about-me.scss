@@ -1,0 +1,38 @@
+@use '../base/variables' as *;
+
+/* About me */
+
+.about-me {
+	@include lg {
+		padding-bottom: 48px;
+	}
+
+	&__mission {
+		.heading--title {
+			margin-bottom: 24px;
+
+			@include xl {
+				margin: 0 0 32px 118px;
+				width: 820px;
+			}
+		}
+	}
+
+	&__video {
+		display: flex;
+		justify-content: center;
+		margin-top: 88px;
+
+		@include lg {
+			margin-top: 112px;
+		}
+
+		video {
+			width: 80px;
+
+			@include lg {
+				width: 160px;
+			}
+		}
+	}
+}
