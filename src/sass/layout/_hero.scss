@@ -10,14 +10,9 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-attachment: fixed;
 
 	@include md {
 		background-image: url('../img/hero-img-desktop.jpg');
-	}
-
-	@include lg {
-		background-attachment: scroll;
 	}
 
 	.container {
