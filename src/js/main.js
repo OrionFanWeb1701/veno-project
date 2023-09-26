@@ -34,46 +34,6 @@ const activeMenu = () => {
 	});
 };
 
-/* Scroll scripts */
-
-const scrollEffect = () => {
-	const currentSection = window.scrollY;
-	const sections = document.querySelectorAll('section');
-	const heroPanel = document.querySelector('.hero__panel');
-	const scrollText = document.querySelector('.hero__scroll-text');
-
-	sections.forEach((section) => {
-		if (section.classList.contains('white-bg') && section.offsetTop <= currentSection + 50) {
-			heroPanel.classList.add('hero__panel--scroll');
-		} else if (!section.classList.contains('white-bg') && section.offsetTop <= currentSection + 50) {
-			heroPanel.classList.remove('hero__panel--scroll');
-		}
-	});
-
-	if (currentSection >= 15) {
-		scrollText.classList.add('hero__scroll-text--change');
-	} else {
-		scrollText.classList.remove('hero__scroll-text--change');
-	}
-
-	/* ScrollSpy */
-
-	const sectionsBox = [];
-	const menuItem = document.querySelectorAll('.nav__menu a');
-
-	sections.forEach((section) => {
-		if (window.scrollY <= section.offsetTop + section.offsetHeight - 50) {
-			sectionsBox.push(section);
-
-			const activeSection = document.querySelector(`[href*="${sectionsBox[0].id}"]`);
-
-			menuItem.forEach((item) => item.classList.remove('active'));
-
-			activeSection.classList.add('active');
-		}
-	});
-};
-
 /* Current year */
 
 const handleCurrentYear = () => {
@@ -83,6 +43,45 @@ const handleCurrentYear = () => {
 	footerYear.innerText = year;
 };
 
-window.addEventListener('scroll', scrollEffect);
+/* Scroll scripts */
+
+window.addEventListener('scroll', () => {
+	const currentSection = window.scrollY;
+	const sections = document.querySelectorAll('section');
+	const heroPanel = document.querySelector('.hero__panel');
+	const scrollText = document.querySelector('.hero__scroll-text');
+	const menuItem = document.querySelectorAll('.nav__menu a');
+
+	const sectionsBox = [];
+
+	sections.forEach((section) => {
+		/* Change style hero panel */
+
+		if (section.classList.contains('white-bg') && section.offsetTop <= currentSection + 50) {
+			heroPanel.classList.add('hero__panel--scroll');
+		} else if (!section.classList.contains('white-bg') && section.offsetTop <= currentSection + 50) {
+			heroPanel.classList.remove('hero__panel--scroll');
+		}
+
+		/* ScrollSpy */
+
+		if (currentSection <= section.offsetTop + section.offsetHeight - 50) {
+			sectionsBox.push(section);
+
+			const activeSection = document.querySelector(`[href*="${sectionsBox[0].id}"]`);
+
+			menuItem.forEach((item) => item.classList.remove('active'));
+
+			activeSection.classList.add('active');
+		}
+	});
+
+	if (currentSection >= 15) {
+		scrollText.classList.add('hero__scroll-text--change');
+	} else {
+		scrollText.classList.remove('hero__scroll-text--change');
+	}
+});
+
 activeMenu();
 handleCurrentYear();

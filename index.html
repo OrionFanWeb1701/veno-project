@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Falcon-dev - stwórz ze mną swoją stronę internetową</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 
@@ -97,7 +98,7 @@
             </article>
 
             <div class="about-me__video">
-              <video src="./dist/img/diamond.mp4" autoplay loop></video>
+              <video loop autoplay src="./dist/img/diamond.webm"></video>
             </div>
           </article>
 
@@ -299,10 +300,107 @@
         </div>
       </section>
 
+      <!-- Clients -->
+
       <section class="clients white-bg" id="clients">
         <div class="container">
           <h2 class="heading heading--title">Klienci</h2>
 
+          <div class="clients__slider">
+
+            <div class="clients__slide">
+
+              <div class="clients__content">
+                <div class="clients__info">
+                  <img src="./dist/img/quote.svg" alt="">
+
+                  <p>Z Michałem pracuję się bardzo dobrze. Doskonale rozumie potrzeby naszej firmy i wykonuje na prawdę
+                    super robotę. Mocno rekomenduję!</p>
+                </div>
+
+                <div class="clients__user">
+                  <img src="./dist/img/user1.png" alt="">
+                  <p>Sean Linehan</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="clients__slide">
+
+              <div class="clients__content">
+                <div class="clients__info">
+                  <img src="./dist/img/quote.svg" alt="">
+
+                  <p>Wszystkie prace projektowe dostarczane są na czas, z dużym zaangażowaniem i najwyższą jakością.
+                    Współpraca trwa od ponad 3-ch lat.</p>
+                </div>
+
+                <div class="clients__user">
+                  <img src="./dist/img/user2.png" alt="">
+                  <p>Wojciech Drzewiecki</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="clients__slide">
+
+              <div class="clients__content">
+                <div class="clients__info">
+                  <img src="./dist/img/quote.svg" alt="">
+
+                  <p>Utalentowany designer z dużym doświadczeniem i dobrym smakiem. Płynnie porusza się w wielu
+                    branżach, co przekłada się na zrozumienie potrzeb i zadowolenie klientów.</p>
+                </div>
+
+                <div class="clients__user">
+                  <img src="./dist/img/user3.png" alt="">
+                  <p>Erwin Bujak</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Próbne slajdy -->
+
+            <div class="clients__slide">
+
+              <div class="clients__content">
+                <div class="clients__info">
+                  <img src="./dist/img/quote.svg" alt="">
+
+                  <p>Utalentowany designer z dużym doświadczeniem i dobrym smakiem. Płynnie porusza się w wielu
+                    branżach, co przekłada się na zrozumienie potrzeb i zadowolenie klientów.</p>
+                </div>
+
+                <div class="clients__user">
+                  <img src="./dist/img/user3.png" alt="">
+                  <p>Erwin Bujak</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="clients__slide">
+
+              <div class="clients__content">
+                <div class="clients__info">
+                  <img src="./dist/img/quote.svg" alt="">
+
+                  <p>Utalentowany designer z dużym doświadczeniem i dobrym smakiem. Płynnie porusza się w wielu
+                    branżach, co przekłada się na zrozumienie potrzeb i zadowolenie klientów.</p>
+                </div>
+
+                <div class="clients__user">
+                  <img src="./dist/img/user3.png" alt="">
+                  <p>Erwin Bujak</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
 
           <div class="clients__logo-box">
 
@@ -345,9 +443,9 @@
       <!-- Floating text -->
 
       <div class="floating-text">
-        <marquee>Beautifying the web <video src="./dist/img/diamond.mp4" autoplay loop></video>
+        <!-- <marquee>Beautifying the web <video src="./dist/img/diamond.webm" loop autoplay></video>
           Engaging
-          interfaces <video src="./dist/img/diamond.mp4" autoplay loop></video> Well converted solutions</marquee>
+          interfaces <video src="./dist/img/diamond.webm" loop autoplay></video> Well converted solutions</marquee> -->
       </div>
 
       <!-- Contact -->
@@ -408,6 +506,8 @@
 
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="./dist/js/tiny-slider-settings.min.js"></script>
   <script src="./dist/js/main.min.js"></script>
 
 </body>

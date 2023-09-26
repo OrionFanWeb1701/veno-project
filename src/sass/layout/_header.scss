@@ -10,7 +10,7 @@
 	width: 85%;
 	height: 100vh;
 	z-index: 1000;
-	transition: transform 1s;
+	transition: transform .3s;
 
 	@include lg {
 		width: 22%;
