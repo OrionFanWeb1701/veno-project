@@ -7,6 +7,12 @@
 		padding-bottom: 48px;
 	}
 
+	.container {
+		@include xxl {
+			padding: 0 347px;
+		}
+	}
+
 	&__mission {
 		.heading--title {
 			margin-bottom: 24px;
@@ -14,6 +20,10 @@
 			@include xl {
 				margin: 0 0 32px 118px;
 				width: 820px;
+			}
+
+			@include xxl {
+				margin-left: 0;
 			}
 		}
 	}

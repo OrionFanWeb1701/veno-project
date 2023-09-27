@@ -17,5 +17,15 @@ const slider = tns({
 			items: 2,
 			gutter: 32,
 		},
+
+		1440: {
+			items: 3,
+			fixedWidth: 437,
+		},
+
+		1920: {
+			items: 4,
+			fixedWidth: 440,
+		},
 	},
 });

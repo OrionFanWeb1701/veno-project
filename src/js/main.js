@@ -63,6 +63,12 @@ window.addEventListener('scroll', () => {
 			heroPanel.classList.remove('hero__panel--scroll');
 		}
 
+		if (currentSection >= 15) {
+			scrollText.classList.add('hero__scroll-text--change');
+		} else {
+			scrollText.classList.remove('hero__scroll-text--change');
+		}
+
 		/* ScrollSpy */
 
 		if (currentSection <= section.offsetTop + section.offsetHeight - 50) {
@@ -75,12 +81,6 @@ window.addEventListener('scroll', () => {
 			activeSection.classList.add('active');
 		}
 	});
-
-	if (currentSection >= 15) {
-		scrollText.classList.add('hero__scroll-text--change');
-	} else {
-		scrollText.classList.remove('hero__scroll-text--change');
-	}
 });
 
 activeMenu();

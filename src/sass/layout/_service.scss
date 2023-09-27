@@ -3,87 +3,105 @@
 /* Service */
 
 .service {
-  .heading--title {
-    @include xl {
-      margin-left: 118px;
-    }
+	.container {
+		@include xxl {
+			padding: 0 347px;
+		}
+	}
 
-    br {
-      display: none;
-      @include lg {
-        display: block;
-      }
-    }
-  }
+	.heading--title {
+		@include xl {
+			margin-left: 118px;
+		}
 
-  &__hashbox {
-    margin-top: 32px;
-  }
-  
-  &__hashtags {
-    padding: 22px 0;
-    border-bottom: 1px solid #e2e8f0;
-  
-    @include lg {
-      padding: 28px 0;
-    }
-  
-    .heading--title {
-      margin-bottom: 16px;
-      font-size: 24px;
-      line-height: 32px;
-  
-      @include md {
-        margin: 0 0 24px 0;
-        text-align: left;
-      }
-    }
-  }
-  
-  &__boxes {
-    @include md {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    p {
-      font-size: 18px;
-      line-height: 22px;
-      color: #6b7280;
-  
-      @include lg {
-        font-size: 20px;
-        line-height: 24px;
-      }
-    }
-  }
-  
-  &__box {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-  
-    @include md {
-      flex-direction: row;
-      column-gap: 16px;
-    }
-  }
-  
-  &__hash {
-    display: flex;
-    justify-content: center;
-    column-gap: 16px;
-    row-gap: 8px;
-    flex-wrap: wrap;
-  }
-  
-  &__number {
-    display: none;
-  
-    @include md {
-      display: block;
-    }
-  }
+		@include xxl {
+			margin-left: 0;
+		}
+
+		br {
+			display: none;
+
+			@include lg {
+				display: block;
+			}
+		}
+	}
+
+	.grid-text {
+		p {
+			@include xxl {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__hashbox {
+		margin-top: 32px;
+	}
+
+	&__hashtags {
+		padding: 22px 0;
+		border-bottom: 1px solid #e2e8f0;
+
+		@include lg {
+			padding: 28px 0;
+		}
+
+		.heading--title {
+			margin-bottom: 16px;
+			font-size: 24px;
+			line-height: 32px;
+
+			@include md {
+				margin: 0 0 24px 0;
+				text-align: left;
+			}
+		}
+	}
+
+	&__boxes {
+		@include md {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 22px;
+			color: #6b7280;
+
+			@include lg {
+				font-size: 20px;
+				line-height: 24px;
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+
+		@include md {
+			flex-direction: row;
+			column-gap: 16px;
+		}
+	}
+
+	&__hash {
+		display: flex;
+		justify-content: center;
+		column-gap: 16px;
+		row-gap: 8px;
+		flex-wrap: wrap;
+	}
+
+	&__number {
+		display: none;
+
+		@include md {
+			display: block;
+		}
+	}
 }
-

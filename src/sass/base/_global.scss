@@ -52,7 +52,7 @@ section {
 .container {
 	padding: 0 24px;
 	width: 100%;
-	max-width: 1440px;
+	max-width: 1920px;
 
 	@include lg {
 		padding: 0 80px;
@@ -60,5 +60,9 @@ section {
 
 	@include xl {
 		padding: 0 149px;
+	}
+
+	@include xxl {
+		padding: 0 189px;
 	}
 }

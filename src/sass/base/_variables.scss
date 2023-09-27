@@ -25,3 +25,9 @@ $font-primary: 'neue-roman-500', sans-serif;
 		@content;
 	}
 }
+
+@mixin xxl() {
+	@media only screen and (min-width: 1920px) {
+		@content;
+	}
+}

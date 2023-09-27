@@ -9,16 +9,23 @@
 		margin-bottom: 112px;
 	}
 
+	.container {
+		@include xl {
+			padding-left: 267px;
+			padding-right: 0;
+		}
+
+		@include xxl {
+			padding-left: 347px;
+		}
+	}
+
 	.heading--title {
 		margin-bottom: 20px;
 		text-align: left;
 
 		@include lg {
 			margin-bottom: 48px;
-		}
-
-		@include xl {
-			margin: 0 0 48px 118px;
 		}
 	}
 
@@ -85,8 +92,11 @@
 		}
 
 		@include xl {
-			margin-left: 118px;
 			width: 906px;
+		}
+
+		@include xxl {
+			width: 1226px;
 		}
 	}
 
@@ -103,11 +113,21 @@
 
 		@include xl {
 			width: 227px;
+			height: 96px;
+		}
+
+		@include xxl {
+			width: 306px;
+			height: 129px;
 		}
 
 		&:nth-child(even) {
 			@include xl {
 				width: 226px;
+			}
+
+			@include xxl {
+				width: 306px;
 			}
 		}
 
@@ -117,6 +137,10 @@
 			@include lg {
 				width: 107px;
 			}
+
+			@include xxl {
+				width: 143.29px;
+			}
 		}
 
 		.lighting {
@@ -124,6 +148,10 @@
 
 			@include lg {
 				width: 40px;
+			}
+
+			@include xxl {
+				width: 53.75px;
 			}
 		}
 
@@ -133,6 +161,10 @@
 			@include lg {
 				width: 128px;
 			}
+
+			@include xxl {
+				width: 172px;
+			}
 		}
 
 		.minte {
@@ -140,6 +172,10 @@
 
 			@include lg {
 				width: 144.6px;
+			}
+
+			@include xxl {
+				width: 194.31px;
 			}
 		}
 
@@ -149,6 +185,10 @@
 			@include lg {
 				width: 129.14px;
 			}
+
+			@include xxl {
+				width: 174.09px;
+			}
 		}
 
 		.carbovia {
@@ -156,6 +196,10 @@
 
 			@include lg {
 				width: 185px;
+			}
+
+			@include xxl {
+				width: 250.49px;
 			}
 		}
 
@@ -165,6 +209,10 @@
 			@include lg {
 				width: 94.74px;
 			}
+
+			@include xxl {
+				width: 127.3px;
+			}
 		}
 
 		.lidl {
@@ -172,6 +220,10 @@
 
 			@include lg {
 				width: 40px;
+			}
+
+			@include xxl {
+				width: 53.75px;
 			}
 		}
 	}
