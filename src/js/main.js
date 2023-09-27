@@ -77,22 +77,34 @@ window.addEventListener('scroll', () => {
 
 			const activeSection = document.querySelector(`[href*="${sectionsBox[0].id}"]`);
 
-			const activeSectionId = sectionsBox[0].id;
-
 			menuItem.forEach((item) => item.classList.remove('active'));
 
 			activeSection.classList.add('active');
 
-			if (activeSectionId === 'start') {
-				scrollTextLink.setAttribute('href', '#about-me');
-			} else if (activeSectionId === 'about-me') {
-				scrollTextLink.setAttribute('href', '#service');
-			} else if (activeSectionId === 'service') {
-				scrollTextLink.setAttribute('href', '#projects');
-			} else if (activeSectionId === 'projects') {
-				scrollTextLink.setAttribute('href', '#clients');
-			} else if (activeSectionId === 'clients') {
-				scrollTextLink.setAttribute('href', '#contact');
+			/* Scroll button */
+
+			const activeSectionId = sectionsBox[0].id;
+
+			switch (activeSectionId) {
+				case 'start':
+					scrollTextLink.setAttribute('href', '#about-me');
+					break;
+
+				case 'about-me':
+					scrollTextLink.setAttribute('href', '#service');
+					break;
+
+				case 'service':
+					scrollTextLink.setAttribute('href', '#projects');
+					break;
+
+				case 'projects':
+					scrollTextLink.setAttribute('href', '#clients');
+					break;
+
+				case 'clients':
+					scrollTextLink.setAttribute('href', '#contact');
+					break;
 			}
 		}
 	});
