@@ -50,6 +50,7 @@ window.addEventListener('scroll', () => {
 	const sections = document.querySelectorAll('section');
 	const heroPanel = document.querySelector('.hero__panel');
 	const scrollText = document.querySelector('.hero__scroll-text');
+	const scrollTextLink = document.querySelector('.hero__scroll-text a');
 	const menuItem = document.querySelectorAll('.nav__menu a');
 
 	const sectionsBox = [];
@@ -76,9 +77,23 @@ window.addEventListener('scroll', () => {
 
 			const activeSection = document.querySelector(`[href*="${sectionsBox[0].id}"]`);
 
+			const activeSectionId = sectionsBox[0].id;
+
 			menuItem.forEach((item) => item.classList.remove('active'));
 
 			activeSection.classList.add('active');
+
+			if (activeSectionId === 'start') {
+				scrollTextLink.setAttribute('href', '#about-me');
+			} else if (activeSectionId === 'about-me') {
+				scrollTextLink.setAttribute('href', '#service');
+			} else if (activeSectionId === 'service') {
+				scrollTextLink.setAttribute('href', '#projects');
+			} else if (activeSectionId === 'projects') {
+				scrollTextLink.setAttribute('href', '#clients');
+			} else if (activeSectionId === 'clients') {
+				scrollTextLink.setAttribute('href', '#contact');
+			}
 		}
 	});
 });

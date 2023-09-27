@@ -19,6 +19,7 @@ const slider = tns({
 		},
 
 		1440: {
+			slideBy: 1,
 			items: 3,
 			fixedWidth: 437,
 		},
