@@ -10,47 +10,31 @@ const activeMenu = () => {
 
 	/* Service navigation */
 
-	const removeActiveClasses = () => {
-		mainPage.classList.remove('main-page--active');
-	};
+	const removeActiveClasses = () => mainPage.classList.remove('main-page--active');
 
 	menuBtn.addEventListener('click', () => {
 		mainPage.classList.add('main-page--active');
 
 		if (mainPage.classList.contains('main-page--active'))
 			navigation.addEventListener('click', (e) => {
-				if (e.target.nodeName == 'A') {
-					removeActiveClasses();
-				}
+				if (e.target.nodeName == 'A') removeActiveClasses();
 			});
 	});
 
-	closeBtn.addEventListener('click', () => {
-		removeActiveClasses();
-	});
+	closeBtn.addEventListener('click', () => removeActiveClasses());
 
-	opacityBox.addEventListener('click', () => {
-		removeActiveClasses();
-	});
-};
-
-/* Current year */
-
-const handleCurrentYear = () => {
-	const footerYear = document.querySelector('.footer-year');
-	const year = new Date().getFullYear();
-
-	footerYear.innerText = year;
+	opacityBox.addEventListener('click', () => removeActiveClasses());
 };
 
 /* Scroll scripts */
 
 window.addEventListener('scroll', () => {
 	const currentSection = window.scrollY;
-	const sections = document.querySelectorAll('section');
 	const heroPanel = document.querySelector('.hero__panel');
 	const scrollText = document.querySelector('.hero__scroll-text');
 	const scrollTextLink = document.querySelector('.hero__scroll-text a');
+
+	const sections = document.querySelectorAll('section');
 	const menuItem = document.querySelectorAll('.nav__menu a');
 
 	const sectionsBox = [];
@@ -109,6 +93,15 @@ window.addEventListener('scroll', () => {
 		}
 	});
 });
+
+/* Current year */
+
+const handleCurrentYear = () => {
+	const footerYear = document.querySelector('.footer-year');
+	const year = new Date().getFullYear();
+
+	footerYear.innerText = year;
+};
 
 activeMenu();
 handleCurrentYear();
